@@ -1,0 +1,37 @@
+{
+  "name": "node-typescript-api-starter",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && node .",
+    "dev": "npm run build && npm run watch",
+    "build": "npm run build-ts && npm run tslint",
+    "serve": "nodemon dist/index.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,green.bold\" \"npm run watch-ts\" \"npm run serve\"",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "4.15.3",
+    "helmet": "^3.8.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/helmet": "0.0.35",
+    "@types/mocha": "2.2.41",
+    "@types/node": "7.0.22",
+    "@types/supertest": "^2.0.2",
+    "concurrently": "^3.5.0",
+    "mocha": "3.4.2",
+    "nodemon": "^1.11.0",
+    "supertest": "3.0.0",
+    "tsc": "1.20150623.0",
+    "tslint": "^5.5.0",
+    "typescript": "2.3.3"
+  }
+}
