@@ -1,4 +1,4 @@
-# node-typescript-api-starter
+# Node.js with TypeScript - REST API Starter
 
 ## Commands
 
